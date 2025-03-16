@@ -1,7 +1,6 @@
 <?php
 include "conexao.php";
 
-// Adicionar atividade
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["adicionar"])) {
     $materia = $_POST["materia"];
     $atividade = $_POST["atividade"];
@@ -11,19 +10,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["adicionar"])) {
     $conn->query($sql);
 }
 
-// Marcar como entregue
 if (isset($_GET["marcar"])) {
     $id = intval($_GET["marcar"]);
     $conn->query("UPDATE atividades SET entregue = 1 WHERE id = $id");
 }
 
-// Excluir atividade
 if (isset($_GET["excluir"])) {
     $id = intval($_GET["excluir"]);
     $conn->query("DELETE FROM atividades WHERE id = $id");
 }
 
-// Editar atividade
 if (isset($_GET["editar"])) {
     $id = intval($_GET["editar"]);
     $materia = $conn->real_escape_string($_GET["materia"]);
@@ -33,7 +29,6 @@ if (isset($_GET["editar"])) {
     $conn->query("UPDATE atividades SET materia='$materia', atividade='$atividade', data_entrega='$data' WHERE id=$id");
 }
 
-// Filtro de atividades
 $filtro = isset($_GET["filtro"]) ? $_GET["filtro"] : "";
 $sql = "SELECT * FROM atividades";
 if ($filtro == "pendente") {
