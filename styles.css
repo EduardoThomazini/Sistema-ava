@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.lista {
+    text-align: left;
+}
+
+.atividade {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.proximo-prazo {
+    background: #ffeeba;
+    border-left: 5px solid #ff9800;
+}
+
+.entregue {
+    text-decoration: line-through;
+    background: #d4edda;
+}
+
+.acoes a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.excluir {
+    color: red;
+}
+
+.editar {
+    color: orange;
+}
+
+.marcar {
+    color: green;
+}
